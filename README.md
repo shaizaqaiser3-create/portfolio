@@ -2,7 +2,7 @@
 
 Welcome to my professional and academic portfolio repository! This project is a centralized, custom-built showcase that bridges my two core professional tracks: advanced data science research in bioinformatics and data-backed social media marketing management.
 
-🔗 **Live Website:**file:///C:/Users/Al%20hamad/OneDrive/Documents/portfolio/index.html
+🔗 **Live Website: https://shaizaqaiser3-create.github.io/portfolio/
 ---
 
 ## 🚀 About Me
