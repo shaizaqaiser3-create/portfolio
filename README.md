@@ -29,7 +29,7 @@ I am a 6th-semester Bioinformatics student at the University of Agriculture, Fai
 
 ## 📂 Repository Structure
 * `index.html` — The main production-ready interactive website, styled with a sleek, charcoal-and-amber academic aesthetic.
-* `IMG_8248.png` — Asset file for the professional profile section.
+
 
 ---
 
