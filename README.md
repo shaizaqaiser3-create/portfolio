@@ -6,7 +6,7 @@ Welcome to my professional and academic portfolio repository! This project is a 
 ---
 
 ## 🚀 About Me
-I am a 6th-semester Bioinformatics student at the University of Agriculture, Faisalabad, actively building machine learning pipelines and structural biology workflows to solve complex multi-omic challenges. Alongside my technical research, I apply my data preprocessing and analytics skills commercially as a professional Social Media Marketing Manager.
+I am a 7th-semester Bioinformatics student at the University of Agriculture, Faisalabad, actively building machine learning pipelines and structural biology workflows to solve complex multi-omic challenges. Alongside my technical research, I apply my data preprocessing and analytics skills commercially as a professional Social Media Marketing Manager.
 
 ---
 
