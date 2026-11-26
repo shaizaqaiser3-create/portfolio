@@ -5,78 +5,135 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shaiza Qaiser | Bioinformatics, Machine Learning and QA</title>
 <meta name="description" content="BS Bioinformatics student working on structural biology, machine learning and software quality assurance. Co-author of a book chapter on synthetic biology.">
+<meta property="og:title" content="Shaiza Qaiser | Bioinformatics, Machine Learning and QA">
+<meta property="og:description" content="Structural biology, machine learning and software quality assurance.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B5C63'/%3E%3Ctext x='32' y='42' font-size='28' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='white'%3ESQ%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F6F8F8; --surface:#FFFFFF; --ink:#12232A; --muted:#566A70; --line:#D5DEDF;
-  --accent:#0B7A75; --accent-ink:#FFFFFF; --tag:#E4F0EF; --note:#FFF6E0;
+  --bg:#F4F7F7; --surface:#FFFFFF; --ink:#13262B; --muted:#52666C; --line:#D8E2E3;
+  --accent:#0B5C63; --accent-soft:#E2F0F0; --accent-ink:#FFFFFF; --warm:#FFF4DC; --warm-ink:#7A5200;
+  --band:#0F2A30; --band-ink:#EAF4F4; --shadow:0 1px 2px rgba(19,38,43,.06),0 8px 24px rgba(19,38,43,.06);
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#0F1A1E; --surface:#16252A; --ink:#E7F0F0; --muted:#9DB3B7; --line:#2A3D43;
-    --accent:#5CC9C0; --accent-ink:#0F1A1E; --tag:#1E3338; --note:#2A2616;
+  :root{
+    --bg:#0E181B; --surface:#152227; --ink:#E8F1F1; --muted:#9DB2B6; --line:#27393E;
+    --accent:#5FC8C0; --accent-soft:#1B3338; --accent-ink:#0E181B; --warm:#2B2614; --warm-ink:#F0CF86;
+    --band:#0A1417; --band-ink:#E8F1F1; --shadow:none;
     color-scheme: dark;
   }
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:16px;line-height:1.65}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
 a{color:var(--accent);text-underline-offset:3px}
-a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
-.wrap{max-width:960px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;line-height:1.2;margin:0}
-header.site{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:5}
-header.site .wrap{display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
-.brand{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:1.1rem;color:var(--ink);text-decoration:none}
-nav ul{list-style:none;display:flex;gap:18px;margin:0;padding:0;flex-wrap:wrap}
-nav a{color:var(--muted);text-decoration:none;font-size:.95rem}
-nav a:hover{color:var(--ink)}
-.hero{padding:72px 0 56px}
-.hero h1{font-size:clamp(2.2rem,5.5vw,3.6rem);font-weight:600;letter-spacing:-.01em;max-width:18ch}
-.hero .lead{font-size:1.15rem;max-width:62ch;color:var(--muted);margin:20px 0 0}
-.hero .seek{margin-top:16px;max-width:62ch}
-.evidence{list-style:none;padding:0;margin:36px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;border:1px solid var(--line);border-radius:8px;background:var(--surface);overflow:hidden}
-.evidence li{padding:18px 20px;border-right:1px solid var(--line)}
-.evidence li:last-child{border-right:0}
-.evidence strong{display:block;font-weight:600}
-.evidence span{color:var(--muted);font-size:.93rem}
-section{padding:52px 0;border-top:1px solid var(--line)}
-.grid{display:grid;grid-template-columns:200px 1fr;gap:12px 40px}
-.grid>h2{font-size:1.5rem}
-.grid .sub{color:var(--muted);font-size:.95rem;margin:6px 0 0;font-family:"IBM Plex Sans",system-ui,sans-serif}
-@media (max-width:760px){.grid{grid-template-columns:1fr}.evidence li{border-right:0;border-bottom:1px solid var(--line)}.evidence li:last-child{border-bottom:0}}
-.item{padding-bottom:28px}
-.item:last-child{padding-bottom:0}
-.item h3{font-size:1.2rem}
-.meta{color:var(--muted);font-size:.93rem;margin:4px 0 10px}
-.item p{margin:0 0 10px;max-width:68ch}
-ul.plain{margin:6px 0 0;padding-left:20px;max-width:68ch}
-ul.plain li{margin-bottom:6px}
-.timeline{border-left:2px solid var(--line);margin-left:6px;padding-left:24px}
-.timeline .item{position:relative}
-.timeline .item::before{content:"";position:absolute;left:-31px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
-.timeline .item.current::before{background:var(--accent)}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0;padding:0;list-style:none}
-.tags li{background:var(--tag);border-radius:999px;padding:3px 12px;font-size:.88rem}
-.skillgroup{margin-bottom:20px}
-.skillgroup h3{font-size:1.02rem;font-family:"IBM Plex Sans",system-ui,sans-serif;font-weight:600}
-.skillgroup p{margin:2px 0 0;color:var(--muted);font-size:.93rem;max-width:64ch}
-.pub{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:20px 22px;margin-bottom:18px}
-.pub h3{font-size:1.15rem;margin-bottom:6px}
-.pub .cite{color:var(--muted);font-size:.93rem;margin:0 0 10px}
-.status{display:inline-block;font-size:.82rem;font-weight:600;padding:2px 10px;border-radius:4px;background:var(--tag);margin-bottom:10px}
-.status.pending{background:var(--note)}
-.links{display:flex;flex-wrap:wrap;gap:16px;margin-top:8px;font-size:.95rem}
-.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:600}
-.btn:hover{filter:brightness(1.08)}
-footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:.93rem}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;margin:0;line-height:1.2;letter-spacing:-.005em}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+
+/* header */
+.site{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+.brand{font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:1.15rem;color:var(--ink);text-decoration:none}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:6px;flex-wrap:wrap}
+nav a{display:block;padding:6px 12px;border-radius:999px;color:var(--muted);text-decoration:none;font-size:.93rem;font-weight:500}
+nav a:hover{background:var(--accent-soft);color:var(--ink)}
+
+/* hero */
+.hero{padding:76px 0 60px}
+.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:start}
+.role{display:inline-block;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:.92rem;padding:5px 14px;border-radius:999px;margin-bottom:18px}
+.hero h1{font-size:clamp(2.4rem,5.6vw,3.9rem);font-weight:700;letter-spacing:-.02em}
+.hero .tagline{font-family:"Source Serif 4",Georgia,serif;font-size:clamp(1.15rem,2.2vw,1.4rem);color:var(--ink);margin:18px 0 0;max-width:30ch;line-height:1.4}
+.hero .lead{color:var(--muted);max-width:60ch;margin:18px 0 0;font-size:1.05rem}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:11px 20px;border-radius:8px;font-weight:600;text-decoration:none;border:1.5px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{filter:brightness(1.1)}
+.btn.ghost{color:var(--accent);background:transparent}
+.btn.ghost:hover{background:var(--accent-soft)}
+.glance{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:6px 22px}
+.glance dl{margin:0}
+.glance div{padding:14px 0;border-bottom:1px solid var(--line)}
+.glance div:last-child{border-bottom:0}
+.glance dt{font-size:.84rem;color:var(--muted);font-weight:500}
+.glance dd{margin:2px 0 0;font-weight:600}
+.glance dd small{display:block;font-weight:400;color:var(--muted);font-size:.9rem}
+
+/* highlights */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);margin-top:48px;overflow:hidden}
+.stats div{padding:20px 22px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats strong{display:block;font-family:"Source Serif 4",Georgia,serif;font-size:1.9rem;line-height:1.1;color:var(--accent)}
+.stats span{color:var(--muted);font-size:.92rem}
+
+/* sections */
+section{padding:64px 0}
+.head{margin-bottom:28px}
+.head h2{font-size:clamp(1.7rem,3.2vw,2.15rem)}
+.head p{color:var(--muted);margin:8px 0 0;max-width:62ch}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:24px 26px}
+.card h3{font-size:1.2rem}
+.meta{color:var(--muted);font-size:.93rem;margin:6px 0 12px}
+.card p{margin:0 0 10px;max-width:70ch}
+.card ul.plain{margin:8px 0 0;padding-left:20px}
+.card ul.plain li{margin-bottom:6px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:12px 0 0}
+.tags li{background:var(--accent-soft);color:var(--ink);font-size:.86rem;padding:3px 12px;border-radius:999px}
+.badge{display:inline-block;font-size:.8rem;font-weight:600;padding:3px 11px;border-radius:6px;background:var(--accent-soft);color:var(--accent);margin-bottom:12px}
+.badge.warm{background:var(--warm);color:var(--warm-ink)}
+.links{display:flex;flex-wrap:wrap;gap:18px;margin-top:12px;font-weight:500}
+.stack{display:grid;gap:18px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+/* timeline */
+.timeline{position:relative;display:grid;gap:18px;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.timeline .card{position:relative}
+.timeline .card::before{content:"";position:absolute;left:-28px;top:30px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.timeline .card.now::before{background:var(--accent)}
+
+/* strengths */
+.strengths{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.strengths h3{font-size:1.1rem;margin-bottom:8px}
+.strengths p{color:var(--muted);margin:0;font-size:.97rem}
+
+/* skills */
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.skills h3{font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:1rem;font-weight:600}
+.skills p{margin:4px 0 0;color:var(--muted);font-size:.93rem}
+
+/* contact band */
+.band{background:var(--band);color:var(--band-ink);padding:64px 0}
+.band h2{font-size:clamp(1.7rem,3.2vw,2.15rem)}
+.band p{color:color-mix(in srgb,var(--band-ink) 78%,transparent);max-width:56ch}
+.band .btn.primary{background:#5FC8C0;border-color:#5FC8C0;color:#0A1417}
+.band .links a{color:#8EE0D9}
+.band .meta{color:color-mix(in srgb,var(--band-ink) 65%,transparent)}
+footer{padding:22px 0 34px;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stats div:nth-child(2){border-right:0}
+  .stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .strengths,.skills,.two{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .wrap{padding:0 18px}
+  nav a{padding:5px 9px}
+  .hero{padding:48px 0 40px}
+}
+@media print{.site{position:static}}
 </style>
 </head>
 <body>
+
 <header class="site">
   <div class="wrap">
     <a class="brand" href="#top">Shaiza Qaiser</a>
@@ -94,40 +151,78 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </header>
 
 <main id="top">
-<div class="wrap">
 
-<div class="hero">
-  <h1>I build and test computational pipelines for biological data.</h1>
-  <p class="lead">I am a BS Bioinformatics student at the University of Agriculture, Faisalabad. My work covers structural biology with AlphaFold, machine learning on biological datasets, and software quality assurance.</p>
-  <p class="seek">I am looking for funded MS positions (2028 intake) and for research or QA internships where careful testing and reproducible analysis matter.</p>
-  <ul class="evidence">
-    <li><strong>Book chapter</strong><span>Synthetic biology and metabolic engineering, Chapter 22. <a href="#publications">See details</a></span></li>
-    <li><strong>SQA internship</strong><span>Khawaja Labs, remote, Nov 2026 to Feb 2027. <a href="#experience">See details</a></span></li>
-    <li><strong>Structural biology project</strong><span>SARS-CoV-2 spike protein with AlphaFold. <a href="#projects">See details</a></span></li>
-  </ul>
+<div class="wrap hero">
+  <div class="hero-grid">
+    <div>
+      <span class="role">Bioinformatics, Machine Learning and QA</span>
+      <h1>Shaiza Qaiser</h1>
+      <p class="tagline">I build and test computational pipelines for biological data.</p>
+      <p class="lead">I am a BS Bioinformatics student at the University of Agriculture, Faisalabad. My work combines structural biology with AlphaFold, machine learning on biological datasets, and careful software quality assurance so that results are reliable and reproducible.</p>
+      <div class="cta">
+        <a class="btn primary" href="#publications">View publications</a>
+        <a class="btn ghost" href="#projects">See projects</a>
+        <a class="btn ghost" href="#contact">Contact me</a>
+      </div>
+    </div>
+    <aside class="glance" aria-label="At a glance">
+      <dl>
+        <div><dt>Studying</dt><dd>BS Bioinformatics<small>University of Agriculture, Faisalabad. CGPA 3.30</small></dd></div>
+        <div><dt>Currently</dt><dd>SQA Intern, Khawaja Labs<small>Remote, Nov 2026 to Feb 2027</small></dd></div>
+        <div><dt>Research output</dt><dd>Co-author, book chapter<small>Synthetic biology and metabolic engineering</small></dd></div>
+        <div><dt>Based in</dt><dd>Faisalabad, Pakistan</dd></div>
+      </dl>
+    </aside>
+  </div>
+
+  <div class="stats" role="list">
+    <div role="listitem"><strong>1</strong><span>Published book chapter</span></div>
+    <div role="listitem"><strong>3</strong><span>Technical projects on GitHub</span></div>
+    <div role="listitem"><strong>2</strong><span>Technical internships</span></div>
+    <div role="listitem"><strong>3+</strong><span>Years of bioinformatics study</span></div>
+  </div>
 </div>
 
-<section id="publications">
-  <div class="grid">
-    <div>
-      <h2>Publications</h2>
-      <p class="sub">Listed with their current status</p>
+<section id="strengths" style="padding-top:8px">
+  <div class="wrap">
+    <div class="strengths">
+      <div class="card">
+        <h3>Structural biology</h3>
+        <p>Protein structure prediction and analysis with AlphaFold, applied to the SARS-CoV-2 spike glycoprotein.</p>
+      </div>
+      <div class="card">
+        <h3>Machine learning</h3>
+        <p>Data cleaning, exploratory analysis and classification models on real datasets using the Python data stack.</p>
+      </div>
+      <div class="card">
+        <h3>Quality assurance</h3>
+        <p>Hands-on SQA internship. I bring a testing mindset to analysis pipelines: check inputs, verify outputs, document everything.</p>
+      </div>
     </div>
-    <div>
-      <article class="pub">
-        <span class="status">Published book chapter</span>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <div class="head">
+      <h2>Publications</h2>
+      <p>Each item is listed with its current status.</p>
+    </div>
+    <div class="stack">
+      <article class="card">
+        <span class="badge">Published book chapter</span>
         <h3>Synthetic Biology and Metabolic Engineering for Natural Product Biosynthesis</h3>
-        <p class="cite">Chapter 22 in <em>Natural Products in Biomedical Research: Frontiers in Medicine</em>. FahumSci. Co-authors: Z. Bibi, S. Khalid, M. Sarwar, S. Altaf, A. Naveed, Bisma, M. S. Majid. Listed in the book as Shaiza Qaisar.</p>
+        <p class="meta">Chapter 22 in <em>Natural Products in Biomedical Research: Frontiers in Medicine</em>, FahumSci. Co-authors: Z. Bibi, S. Khalid, M. Sarwar, S. Altaf, A. Naveed, Bisma, M. S. Majid. Listed in the book as Shaiza Qaisar.</p>
         <p>I co-authored this chapter on how synthetic biology and metabolic engineering are used to produce natural products with therapeutic value.</p>
         <div class="links">
           <a href="https://fahumsci.com/wp-content/uploads/2025/12/Chapter-22-NPBR.pdf" rel="noopener">Read the chapter (PDF)</a>
           <a href="https://fahumsci.com/natural-products-in-biomedical-research-frontiers-in-medicine/" rel="noopener">View the book</a>
         </div>
       </article>
-      <article class="pub">
-        <span class="status pending">Forthcoming</span>
+      <article class="card">
+        <span class="badge warm">Forthcoming</span>
         <h3>Review of PCR variants and their diagnostic applications in cancer research</h3>
-        <p class="cite">Co-authored review paper. Journal and submission status to be added.</p>
+        <p class="meta">Co-authored review paper. Journal details will be added on publication.</p>
         <p>The review covers the main variants of polymerase chain reaction and how each is used in cancer diagnostics.</p>
         <!-- When you have a journal name, DOI or preprint link, replace "Forthcoming" with the exact status (In review, Accepted, Published) and add the link. -->
       </article>
@@ -136,22 +231,22 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </section>
 
 <section id="experience">
-  <div class="grid">
-    <div>
+  <div class="wrap">
+    <div class="head">
       <h2>Experience</h2>
-      <p class="sub">Most recent first</p>
+      <p>Technical and professional roles, most recent first.</p>
     </div>
     <div class="timeline">
-      <div class="item current">
+      <article class="card now">
         <h3>SQA Intern, Khawaja Labs</h3>
         <p class="meta">Remote. 16 Nov 2026 to 16 Feb 2027. Certificate of completion on finishing.</p>
-        <p>Khawaja Labs is a digital strategy and development studio. I work within a product team under the mentorship of its engineers on software quality assurance tasks.</p>
+        <p>Khawaja Labs is a digital strategy and development studio. I work within a product team, under the mentorship of its engineers, on software quality assurance.</p>
         <ul class="plain">
           <li>Meet project milestones on schedule and follow the studio’s confidentiality standards.</li>
           <!-- Add 2 or 3 specific things you actually did, for example: wrote test cases, logged and verified bugs, tested on devices, used a tool. Only list what you really did. -->
         </ul>
-      </div>
-      <div class="item current">
+      </article>
+      <article class="card now">
         <h3>Social Media Marketing Manager, Visa SignUp (Pvt.) Ltd.</h3>
         <p class="meta">Part-time, remote from Faisalabad. May 2026 to present.</p>
         <ul class="plain">
@@ -159,75 +254,77 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <li>Track audience conversion metrics and clean campaign data to improve engagement.</li>
           <li>Automate content schedules across channels.</li>
         </ul>
-      </div>
-      <div class="item">
+      </article>
+      <article class="card">
         <h3>Data Science Intern, T-Code Lab</h3>
-        <p class="meta">2026. Add exact start and end dates.</p>
+        <p class="meta">2026. <!-- Add exact start and end dates here. --></p>
         <ul class="plain">
           <li>Cleaned and preprocessed real-world datasets, including handling inconsistent and missing values.</li>
           <li>Built Random Forest classifiers and exploratory dashboards with Pandas, NumPy, Matplotlib and TensorFlow.</li>
         </ul>
-      </div>
+      </article>
     </div>
   </div>
 </section>
 
 <section id="projects">
-  <div class="grid">
-    <div>
+  <div class="wrap">
+    <div class="head">
       <h2>Projects</h2>
-      <p class="sub">Code is on GitHub</p>
+      <p>Selected work. The code for each project is on GitHub.</p>
     </div>
-    <div>
-      <div class="item">
+    <div class="two">
+      <article class="card">
         <h3>SARS-CoV-2 spike protein structure modeling</h3>
         <p class="meta">2026. Computational structural biology.</p>
         <p>I used AlphaFold-based structure prediction to study the SARS-CoV-2 spike glycoprotein, mapping secondary structure elements and binding-region configurations.</p>
         <ul class="tags"><li>AlphaFold</li><li>Jupyter</li><li>Deep learning</li><li>Molecular modeling</li></ul>
         <div class="links"><a href="https://github.com/shaizaqaiser3-create/covid-spike-protein-alphafold" rel="noopener">View repository</a></div>
-      </div>
-      <div class="item">
+      </article>
+      <article class="card">
         <h3>Genomic sequence analysis in Python</h3>
         <p class="meta">2026. Open-source genomics pipeline.</p>
         <p>A Biopython utility that reads viral DNA sequences, performs transcription and translation, and maps raw sequences to amino acid arrays.</p>
         <ul class="tags"><li>Python</li><li>Biopython</li><li>Jupyter</li><li>Sequence alignment</li></ul>
         <div class="links"><a href="https://github.com/shaizaqaiser3-create/Genomic-Analysis-Python" rel="noopener">View repository</a></div>
-      </div>
-      <div class="item">
+      </article>
+    </div>
+    <div class="stack" style="margin-top:18px">
+      <article class="card">
         <h3>Classification and data cleaning case studies</h3>
         <p class="meta">May 2026. Built during the T-Code Lab internship.</p>
-        <p>Preprocessing workflows, exploratory data analysis, and Random Forest classification on real datasets.</p>
+        <p>Preprocessing workflows, exploratory data analysis and Random Forest classification on real datasets.</p>
         <ul class="tags"><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Random Forest</li><li>TensorFlow</li></ul>
         <div class="links"><a href="https://github.com/shaizaqaiser3-create" rel="noopener">GitHub profile</a></div>
-      </div>
+      </article>
     </div>
   </div>
 </section>
 
 <section id="skills">
-  <div class="grid">
-    <div>
+  <div class="wrap">
+    <div class="head">
       <h2>Skills</h2>
-      <p class="sub">What I use, and for what</p>
+      <p>What I use, and what I use it for.</p>
     </div>
-    <div>
-      <div class="skillgroup">
+    <div class="skills">
+      <div class="card">
         <h3>Computational biology</h3>
         <p>Sequence parsing and translation with Biopython. Protein structure prediction and analysis with AlphaFold.</p>
         <ul class="tags"><li>Biopython</li><li>AlphaFold</li><li>Sequence analysis</li><li>Molecular visualization</li></ul>
       </div>
-      <div class="skillgroup">
+      <div class="card">
         <h3>Data science and machine learning</h3>
-        <p>Data cleaning, exploratory analysis, and classification models.</p>
+        <p>Data cleaning, exploratory analysis and classification models.</p>
         <ul class="tags"><li>Python</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Random Forest</li><li>TensorFlow</li></ul>
       </div>
-      <div class="skillgroup">
+      <div class="card">
         <h3>Software quality assurance</h3>
         <p>Currently developing these skills in my SQA internship.</p>
         <ul class="tags"><li>Test case design</li><li>Bug reporting</li><li>Remote team workflow</li></ul>
         <!-- Add tools you really use, for example Postman, pytest, Selenium, Jira, Git. -->
       </div>
-      <div class="skillgroup">
+      <div class="card">
         <h3>Other</h3>
         <p>R and Linux at a working level. Social media strategy and content analytics.</p>
         <ul class="tags"><li>R</li><li>Linux</li><li>Git</li><li>Social media marketing</li></ul>
@@ -237,45 +334,41 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </section>
 
 <section id="education">
-  <div class="grid">
-    <div>
+  <div class="wrap">
+    <div class="head">
       <h2>Education</h2>
     </div>
-    <div>
-      <div class="item">
-        <h3>BS Bioinformatics, University of Agriculture, Faisalabad</h3>
-        <p class="meta">2023 to present. 7th semester. CGPA 3.30.</p>
-        <p>Coursework includes machine learning, neural networks, advanced genetics, data structures, and database management systems. I focus on genomic data analysis and computational structural biology.</p>
-      </div>
-    </div>
+    <article class="card">
+      <h3>BS Bioinformatics, University of Agriculture, Faisalabad</h3>
+      <p class="meta">2023 to present. 7th semester. CGPA 3.30.</p>
+      <p>Coursework includes machine learning, neural networks, advanced genetics, data structures and database management systems. My focus areas are genomic data analysis and computational structural biology.</p>
+    </article>
   </div>
 </section>
 
-<section id="contact">
-  <div class="grid">
-    <div>
-      <h2>Contact</h2>
-    </div>
-    <div>
-      <p>I welcome research collaborations, internship opportunities, and conversations about funded MS programs.</p>
-      <p><a class="btn" href="mailto:shaizaqaiser3@gmail.com">Email me</a></p>
-      <div class="links">
-        <a href="https://github.com/shaizaqaiser3-create" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/shaizaqaiser3" rel="noopener">LinkedIn</a>
-      </div>
-      <p class="meta">Faisalabad, Pakistan</p>
-    </div>
-  </div>
-</section>
-
-</div>
 </main>
+
+<section id="contact" class="band">
+  <div class="wrap">
+    <h2>Let’s work together</h2>
+    <p>I welcome research collaborations, internship opportunities and conversations about bioinformatics, machine learning and software quality.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:shaizaqaiser3@gmail.com">Email me</a>
+    </div>
+    <div class="links">
+      <a href="https://github.com/shaizaqaiser3-create" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/shaizaqaiser3" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="meta">shaizaqaiser3@gmail.com · Faisalabad, Pakistan</p>
+  </div>
+</section>
 
 <footer>
   <div class="wrap">
-    <span>Shaiza Qaiser</span>
+    <span>© 2026 Shaiza Qaiser</span>
     <span>Last updated November 2026</span>
   </div>
 </footer>
+
 </body>
 </html>
